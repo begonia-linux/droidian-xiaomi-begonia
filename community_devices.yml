@@ -1,0 +1,22 @@
+xiaomi_begonia:
+  type: image
+  arch: arm64
+  edition: [phosh, cutie]
+  variant: phone
+  apilevel: 29
+  use_internal_repository: false
+
+  packages:
+    - adaptation-xiaomi-begonia
+    - adaptation-xiaomi-begonia-configs
+    - adaptation-xiaomi-begonia-android
+    - linux-bootimage-4.14.141-xiaomi-begonia
+    - linux-bootimage-xiaomi-begonia
+    - linux-headers-4.14.141-xiaomi-begonia
+    - linux-headers-xiaomi-begonia
+    - linux-image-4.14.141-xiaomi-begonia
+    - linux-image-xiaomi-begonia
+    - adaptation-hybris-api29-phone-dual-sim
+    - droidian-camera
+    - python3-evdev
+    - mobile-power-saver
