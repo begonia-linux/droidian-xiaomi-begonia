@@ -1,7 +1,7 @@
 xiaomi_begonia:
   type: image
   arch: arm64
-  edition: [phosh, cutie]
+  edition: phosh
   variant: phone
   apilevel: 29
   use_internal_repository: false
