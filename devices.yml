@@ -37,10 +37,15 @@
     - adaptation-sony-bahamut
     - adaptation-sony-bahamut-configs
 
+.volla_algiz_packages:
+  packages: &volla_algiz_packages
+    - adaptation-volla-algiz
+    - adaptation-volla-algiz-configs
+
 .volla_mimameid_packages:
   packages: &volla_mimameid_packages
-    - adaptation-volla-mimameid
-    - adaptation-volla-mimameid-configs
+    - adaptation-volla-mimameid-h12
+    - adaptation-volla-mimameid-h12-configs
 
 .volla_mimir_packages:
   packages: &volla_mimir_packages
@@ -48,10 +53,20 @@
     - adaptation-volla-mimir-configs
     - adaptation-volla-mimir-configs-luks-encryption
 
+.volla_vidofnir_packages:
+  packages: &volla_vidofnir_packages
+    - adaptation-volla-vidofnir
+    - adaptation-volla-vidofnir-configs
+
 .volla_yggdrasil_packages:
   packages: &volla_yggdrasil_packages
     - adaptation-volla-yggdrasil
     - adaptation-volla-yggdrasil-configs
+
+.volla_yggdrasilx_packages:
+  packages: &volla_yggdrasilx_packages
+    - adaptation-volla-yggdrasilx
+    - adaptation-volla-yggdrasilx-configs
 
 .xiaomi_miatoll_packages:
   packages: &xiaomi_miatoll_packages
@@ -64,7 +79,7 @@
 
 rootfs:
   type: rootfs
-  arch: [armhf, arm64]
+  arch: [arm64]
   edition: phosh
   variant: phone
   apilevel: [28, 29, 30, 32, 33]
@@ -165,15 +180,45 @@ volla_yggdrasil:
 
   packages: *volla_yggdrasil_packages
 
-# Volla Phone 22 (mimameid)
-volla_mimameid:
-  type: rootfs
+# Volla Phone X (yggdrasilx)
+volla_yggdrasilx:
+  type: image
   arch: arm64
   edition: phosh
   variant: phone
-  apilevel: 30
+  apilevel: 29
+
+  packages: *volla_yggdrasilx_packages
+
+# Volla Phone 22 (mimameid)
+volla_mimameid:
+  type: image
+  arch: arm64
+  edition: phosh
+  variant: phone
+  apilevel: 32
 
   packages: *volla_mimameid_packages
+
+# Volla Phone X23 (vidofnir)
+volla_vidofnir:
+  type: image
+  arch: arm64
+  edition: phosh
+  variant: phone
+  apilevel: 32
+
+  packages: *volla_vidofnir_packages
+
+# Volla Phone Quintus (algiz)
+volla_algiz:
+  type: image
+  arch: arm64
+  edition: phosh
+  variant: phone
+  apilevel: 33
+
+  packages: *volla_algiz_packages
 
 # Volla Tablet (mimir)
 #
