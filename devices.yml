@@ -30,7 +30,6 @@
   packages: &lenovo_bronco_packages
     - adaptation-lenovo-bronco
     - adaptation-lenovo-bronco-configs
-    - ofono-ril-plugin
 
 .sony_bahamut_packages:
   packages: &sony_bahamut_packages
@@ -146,7 +145,7 @@ google_sargo:
 lenovo_bronco:
   type: image
   arch: arm64
-  edition: [phosh, plamo_wf_experimental]
+  edition: [phosh]
   variant: phone
   apilevel: 32
 
